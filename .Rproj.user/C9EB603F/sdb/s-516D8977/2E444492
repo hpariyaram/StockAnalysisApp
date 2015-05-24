@@ -1,0 +1,16 @@
+{
+    "contents" : "# server.R\n\nlibrary(quantmod)\n\nshinyServer(function(input, output) {\n\n  output$plot1 <- renderPlot({\n    data <- getSymbols(input$symb, src = \"google\", \n      from = input$dates[1],\n      to = input$dates[2],\n      auto.assign = FALSE)\n     \n    chartSeries(data, theme = \"white\", multi.col=TRUE,\n     type = \"candles\", TA = NULL)\n    addMACD()\n    \n  })\n  \n  output$plot2 <- renderPlot({\n    data <- getSymbols(input$symb, src = \"google\", \n                       from = input$dates[1],\n                       to = input$dates[2],\n                       auto.assign = FALSE)\n    \n    barChart(data, theme=\"white\", multi.col=TRUE)\n    addEMA()\n  })\n  \n})",
+    "created" : 1432450376332.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3517971698",
+    "id" : "2E444492",
+    "lastKnownWriteTime" : 1432486014,
+    "path" : "C:/Bahul/Coursera/JHU-DataScience/DP/DP-CProj1/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

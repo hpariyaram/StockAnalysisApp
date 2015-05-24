@@ -1,0 +1,17 @@
+{
+    "contents" : "---\ntitle: \"StockAnalysisApp\"\nauthor: \"Hari Pariyaram\"\ndate: \"Sunday, May 24, 2015\"\noutput: html_document\nruntime: shiny\n---\n\n## Stock Analysis App - Overview\n\nThe Stock Analysis Shiny App will collect two pieces of input\nand provide twp basic stock analysis chart\n\nThe advantages this App provides are\n- Basic moving average of a stock ticker symbol\n- Basic Analysis of the stock over a period\n- One eye chart view of volume and trend of the stock\n\n## Stock Analysis App - Inputs\n\nThe Stock Analysis collect two pieces of information from the user\n- A Stock ticker symbol\n- A date range to collect stock information\n\nThen the stock information is collected from the Google Finance using\nthe quantmod R financial package.  The function call used is **getSymbols()**.\nFor example if user enters AMZN as the ticker symbol, a similiar piece of R\ncode as below will be executed.\n\n```{r}\nlibrary(quantmod)\ngetSymbols(c(\"AMZN\"), src = \"google\")\n```\nAlso the stock charts are adjusted interactively.\n\n## Stock Analysis Output\n\n\nThe Stock Analysis App will output two plots.\n- A basic time series chart of the stock ticker symbol \n- A bar chart with Exponential Moving Average (EMA)\nIn the first chart a Moving Average Convergence and Divergence (MACD) is added.\nThe MACD is added using *addMACD()* quantmod function.\nThe EMA is added using *addEMA()* quantmod function\n\n## Stock Analysis App - Basic Stock chart\n\nThe first chart is the basic candle series stock chart.\n\nFor example if the ticker symbol is 'AMZN' and we have a date range\nfor January 1, 2014 to December 31, 2014, a plot like below \nwill be presented.\n\n```{r, echo=TRUE}\nlibrary(quantmod)\ndata1 <- getSymbols(c(\"AMZN\"), src = \"google\", from = '2014-01-01', to = '2014-12-31' , auto.assign=FALSE)\nchartSeries(data1, theme = \"white\", multi.col=TRUE,\n     type = \"candles\")\naddMACD()\n```\n\n## Stock Analysis App - Bar chart with EMA\n\nThe second chart is the basic bar chart and an Exponential \nMoving Average is added to the chart.\n\nFor example if the ticker symbol is 'AMZN' and we have a date range\nfor January 1, 2014 to December 31, 2014, a plot like below \nwill be presented.\n\n```{r, echo=TRUE}\nlibrary(quantmod)\ndata1 <- getSymbols(c(\"AMZN\"), src = \"google\", from = '2014-01-01', to = '2014-12-31' , auto.assign=FALSE)\nbarChart(data1, theme=\"white\", multi.col=TRUE)\naddEMA()\n```\n",
+    "created" : 1432492561991.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3025202115",
+    "id" : "522E2225",
+    "lastKnownWriteTime" : 1432492830,
+    "path" : "C:/Bahul/Coursera/JHU-DataScience/DP/StockAnalysisApp/StockAnalysisApp-ShinyDocumentation.Rmd",
+    "project_path" : "StockAnalysisApp-ShinyDocumentation.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}

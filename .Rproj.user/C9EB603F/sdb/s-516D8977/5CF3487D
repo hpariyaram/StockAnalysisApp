@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# ui.R\n# Developing Data Products - Course Project 1\n\nlibrary(shiny)\n\nshinyUI(fluidPage(\n  titlePanel(\"Stock Analysis App\"),\n  \n  fluidRow(\n    column(6, \n           h3(\"Enter Ticker Symbol\"),\n           helpText(\"Select a stock to examine. \n                      Information will be collected from Google finance.\"),\n           textInput(\"symb\", \"Symbol\", \"GOOG\")\n           \n           ),\n    column(6,\n           h3(\"Enter a Date Range\"),\n           helpText(\"Select a date range for \n                      the stock information to be collected from Google finance.\"),\n           dateRangeInput(\"dates\", \n                          \"Date range\",\n                          start = \"2014-01-01\", \n                          end = as.character(Sys.Date()))\n           )    \n  ),\n\nfluidRow(\n  \n    mainPanel(plotOutput(\"plot1\")),\n    mainPanel(plotOutput(\"plot2\"))\n    )\n  )\n)",
+    "created" : 1432450248575.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1868725130",
+    "id" : "5CF3487D",
+    "lastKnownWriteTime" : 1432484046,
+    "path" : "C:/Bahul/Coursera/JHU-DataScience/DP/DP-CProj1/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
