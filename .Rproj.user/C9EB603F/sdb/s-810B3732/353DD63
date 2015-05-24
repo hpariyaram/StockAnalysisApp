@@ -1,0 +1,17 @@
+{
+    "contents" : "README.md\n---\n\n## Stock Analysis App - Overview\n\nThe Stock Analysis Shiny App will collect two pieces of input\nand provide twp basic stock analysis chart\n\nThe advantages this App provides are\n- Basic moving average of a stock ticker symbol\n- Basic Analysis of the stock over a period\n- One eye chart view of volume and trend of the stock",
+    "created" : 1432492922829.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1332249160",
+    "id" : "353DD63",
+    "lastKnownWriteTime" : 1432492980,
+    "path" : "C:/Bahul/Coursera/JHU-DataScience/DP/StockAnalysisApp/README.md",
+    "project_path" : "README.md",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "markdown"
+}

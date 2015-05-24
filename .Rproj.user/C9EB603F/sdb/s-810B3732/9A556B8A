@@ -1,0 +1,17 @@
+{
+    "contents" : "\\name{StockAnalysisApp}\n\\alias{StockAnalysisApp}\n%- Also NEED an '\\alias' for EACH other topic documented here.\n\\title{\n%%  ~~function to do ... ~~\n}\n\\description{\n%%  ~~ A concise (1-5 lines) description of what the function does. ~~\nThe StockAnalysisApp is a Shiny Application that accepts a stock ticker symbol\nand a date range from the user.  Then it pulls out the details of the stock\nfrom Google Finance Source and provide two stock analysis charts for that\nparticular ticker symbol.\n}\n\\usage{\nThe StockAnalysisApp is a Shiny App and hosted in Shiny Server.\n}\n",
+    "created" : 1432491221333.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1005230290",
+    "id" : "9A556B8A",
+    "lastKnownWriteTime" : 1432492522,
+    "path" : "C:/Bahul/Coursera/JHU-DataScience/DP/StockAnalysisApp/UserDoc.Rd",
+    "project_path" : "UserDoc.Rd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_doc"
+}

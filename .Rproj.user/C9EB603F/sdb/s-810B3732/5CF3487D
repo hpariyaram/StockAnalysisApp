@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# ui.R\n# Developing Data Products - Course Project 1\n\nlibrary(shiny)\n\nshinyUI(fluidPage(\n  titlePanel(\"Stock Analysis App\"),\n  helpText(\"The StockAnalysisApp is a Shiny Application that accepts a stock ticker symbol\nand a date range from the user.  Then it pulls out the details of the stock\nfrom Google Finance Source and provide two stock analysis charts for that\n           particular ticker symbol.\n           More Information can be found at: \"),\n  h5(\"Stock Analysis App Presentation\", a(\"http://rpubs.com/hpariyaram/StockAnalysisApp\", href=\"http://rpubs.com/hpariyaram/StockAnalysisApp\")),\n  \n  fluidRow(\n    column(6, \n           h3(\"Enter Ticker Symbol\"),\n           helpText(\"Select a stock to examine. \n                      Information will be collected from Google finance.\"),\n           textInput(\"symb\", \"Symbol\", \"GOOG\")\n           \n           ),\n    column(6,\n           h3(\"Enter a Date Range\"),\n           helpText(\"Select a date range for \n                      the stock information to be collected from Google finance.\"),\n           dateRangeInput(\"dates\", \n                          \"Date range\",\n                          start = \"2014-01-01\", \n                          end = as.character(Sys.Date()))\n           )    \n  ),\n\nfluidRow(\n  \n    mainPanel(plotOutput(\"plot1\")),\n    mainPanel(plotOutput(\"plot2\"))\n    )\n  )\n)",
+    "created" : 1432450248575.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1207400799",
+    "id" : "5CF3487D",
+    "lastKnownWriteTime" : 1432498092,
+    "path" : "C:/Bahul/Coursera/JHU-DataScience/DP/StockAnalysisApp/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
